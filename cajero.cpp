@@ -7,6 +7,15 @@ void consultarSaldo (double saldo){
     cout << "Su saldo disponible es de: $" << saldo << endl;
 }
 
+void depositarSaldo(double &saldo)
+{
+    double deposito;
+    cout << "¿Cuanto desea depositar?" << endl;
+    cin >> deposito;
+    saldo = +deposito;
+    cout << "Deposito realizado" << endl
+         << "Su saldo actual es de :" << saldo << endl;
+}
 int main (){
     int operando;
     int opcion;
@@ -19,11 +28,11 @@ int main (){
         cin>>opcion;
         switch(opcion){
             case 1:
-                void consultarSaldo (double saldo);
+                consultarSaldo (saldo);
             break;
 
             case 2:
-
+                depositarSaldo(saldo);
             break;
 
             case 3:
