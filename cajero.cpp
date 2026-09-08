@@ -2,6 +2,10 @@
 using namespace std;
 
 bool salir=0;
+double saldo=0.00;
+void consultarSaldo (double saldo){
+    cout << "Su saldo disponible es de: $" << saldo << endl;
+}
 
 int main (){
     int operando;
@@ -15,7 +19,7 @@ int main (){
         cin>>opcion;
         switch(opcion){
             case 1:
-                
+                void consultarSaldo (double saldo);
             break;
 
             case 2:
