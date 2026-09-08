@@ -2,6 +2,18 @@
 using namespace std;
 
 bool salir=0;
+//double *puntero = &saldo;
+
+void retirar(double *saldo, double retirando){
+    if(*saldo<retirando){
+        cout<<"Fondos insuficientes para retirar\n";
+    }
+    else{
+        cout<<"Retirando: $"<< retirando<<endl;
+        *saldo += retirando;
+        cout <<"Saldo restante: $"<< *saldo<<endl;
+    }
+}
 
 int main (){
     int operando;
