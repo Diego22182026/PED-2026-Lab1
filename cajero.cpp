@@ -3,9 +3,16 @@ using namespace std;
 
 bool salir=0;
 
+double consultarSaldo (double saldo){
+                cout << "Su saldo disponible es de: " << "$" << saldo << endl;
+                return saldo;
+
+                };
+
 int main (){
     int operando;
     int opcion;
+    int saldo;
     while(salir==0){
         cout<<"Elija una opcion a realizar:\n";
         cout<<"1. Consultar \n"<<
@@ -15,7 +22,7 @@ int main (){
         cin>>opcion;
         switch(opcion){
             case 1:
-                
+                consultarSaldo (saldo);
             break;
 
             case 2:
