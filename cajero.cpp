@@ -19,6 +19,7 @@ void depositarSaldo(double &saldo)
 int main (){
     int operando;
     int opcion;
+    int saldo;
     while(salir==0){
         cout<<"Elija una opcion a realizar:\n";
         cout<<"1. Consultar \n"<<
