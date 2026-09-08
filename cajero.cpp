@@ -12,14 +12,29 @@ void depositarSaldo(double &saldo)
     double deposito;
     cout << "¿Cuanto desea depositar?" << endl;
     cin >> deposito;
-    saldo = +deposito;
+    saldo += deposito;
     cout << "Deposito realizado" << endl
          << "Su saldo actual es de :" << saldo << endl;
 }
+
+void retirar(double *saldo){
+    int retirando;
+    cout << "¿Cuanto desea retirar?" << endl;
+    cin >> retirando;
+
+    if(*saldo<retirando){
+        cout<<"Fondos insuficientes para retirar\n";
+    }
+    else if(retirando%5==0){
+        cout<<"Retirando: $"<< retirando<<endl;
+        *saldo -= retirando;
+        cout <<"Saldo restante: $"<< *saldo<<endl;
+    }
+    else{cout<<"No es multiplo de 5 lo retirado\n";}
+}
+
 int main (){
-    int operando;
     int opcion;
-    int saldo;
     while(salir==0){
         cout<<"Elija una opcion a realizar:\n";
         cout<<"1. Consultar \n"<<
@@ -37,7 +52,7 @@ int main (){
             break;
 
             case 3:
-
+                retirar(&saldo);
             break;
 
             case 4:
